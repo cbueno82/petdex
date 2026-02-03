@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!--
+    PETDEX
+    Pokédex de animales asociada a servicios de AWS
+    Web estática alojable en Amazon S3
+  -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PETDEX — Animales & AWS</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="pokedex-header">
+  <div class="led blue"></div>
+  <div class="led red"></div>
+  <div class="led yellow"></div>
+
+  <h1>PETDEX</h1>
+  <p>Nuestras criaturitas nos explican AWS</p>
+</header>
+
+<main class="pokedex-grid">
+
+  <!-- #001 EC2 -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#001</div>
+    <img src="images/Calma_no_calmada.jpeg" alt="Calma no calmada">
+    <h2>Calma</h2>
+    <div class="types">
+      <span class="type compute">Compute</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon EC2</p>
+      <p>
+        Parece completamente relajada, tumbada sin prisa.
+        Pero basta que algo la altere para que se levante,
+        corra y consuma energía sin medida.
+        EC2 funciona igual: tranquila hasta que hace falta potencia real.
+      </p>
+      <p><strong>Movimiento especial:</strong> Auto Scaling inesperado</p>
+    </div>
+  </article>
+
+  <!-- #002 LAMBDA -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#002</div>
+    <img src="images/Coco_destruccion.jpg" alt="Coco">
+    <h2>Coco</h2>
+    <div class="types">
+      <span class="type serverless">Serverless</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> AWS Lambda</p>
+      <p>
+        Dormido, ajeno a todo… hasta que algo se rompe.
+        Entonces aparece, actúa con violencia quirúrgica
+        y vuelve a desaparecer como si nada hubiera pasado.
+        No se queda, no pregunta, no mantiene estado.
+      </p>
+      <p><strong>Movimiento especial:</strong> Trigger por evento mal planteado</p>
+    </div>
+  </article>
+
+  <!-- #003 EVENTBRIDGE -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#003</div>
+    <img src="images/Cosima_destruccion.jpg" alt="Cósima">
+    <h2>Cósima</h2>
+    <div class="types">
+      <span class="type network">Event-driven</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon EventBridge</p>
+      <p>
+        No se mueve. Observa.
+        Escucha todo lo que ocurre a su alrededor
+        y decide cuándo otros deben actuar.
+        Ella no ejecuta el caos, lo coordina.
+      </p>
+      <p><strong>Movimiento especial:</strong> Evento en bucle infinito</p>
+    </div>
+  </article>
+
+  <!-- #004 CLOUDFRONT -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#004</div>
+    <img src="images/Dio.JPG" alt="Dio" class="contain">
+    <h2>Dio</h2>
+    <div class="types">
+      <span class="type network">CDN</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon CloudFront</p>
+      <p>
+        Siempre en primera línea, recibiendo a todos antes que nadie.
+        Parece simpático, pero es inflexible con el rendimiento.
+        Si puede evitar que molesten al backend, lo hará sin dudar.
+      </p>
+      <p><strong>Movimiento especial:</strong> Cache Hit demoledor</p>
+    </div>
+  </article>
+
+  <!-- #005 LIGHTSAIL -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#005</div>
+    <img src="images/guppy_cachorro.jpeg" alt="Guppy">
+    <h2>Guppy</h2>
+    <div class="types">
+      <span class="type compute">Compute simplificado</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon Lightsail</p>
+      <p>
+        Pequeño, manejable y sin malas intenciones.
+        Hace justo lo que se le pide y nada más.
+        Ideal para aprender sin miedo… hasta que crece
+        y pide algo más serio.
+      </p>
+      <p><strong>Movimiento especial:</strong> Setup en cinco minutos</p>
+    </div>
+  </article>
+
+  <!-- #006 RDS -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#006</div>
+    <img src="images/marido_minchi.jpg" alt="Marido y Minchi">
+    <h2>Marido &amp; Minchi</h2>
+    <div class="types">
+      <span class="type database">Base de datos</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon RDS (Multi-AZ)</p>
+      <p>
+        Uno duerme, el otro vigila.
+        Si uno cae, el otro se levanta sin hacer ruido.
+        Funcionan como una pareja perfectamente sincronizada:
+        redundancia sin dramas.
+      </p>
+      <p><strong>Movimiento especial:</strong> Promoción automática del standby</p>
+    </div>
+  </article>
+
+  <!-- #007 S3 + BACKUP -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#007</div>
+    <img src="images/maya_panzaariba_ronca_y_nina_damisela.jpg" alt="Maya y Nina">
+    <h2>Maya &amp; Nina</h2>
+    <div class="types">
+      <span class="type storage">Storage</span>
+      <span class="type protection">Protección</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicios:</strong> Amazon S3 + AWS Backup</p>
+      <p>
+        Maya duerme panza arriba porque sabe que nada va a fallar.
+        Nina observa en silencio, preparada para actuar solo
+        cuando algo sale realmente mal.
+        Confianza absoluta y respaldo discreto.
+      </p>
+      <p><strong>Movimiento especial:</strong> Once nines + Restore salvador</p>
+    </div>
+  </article>
+
+  <!-- #008 ECS + FARGATE -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#008</div>
+    <img src="images/Monkey_Cleo.jpeg" alt="Monkey y Cleo" class="contain">
+    <h2>Monkey &amp; Cleo</h2>
+    <div class="types">
+      <span class="type compute">Contenedores</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon ECS + Fargate</p>
+      <p>
+        Monkey organiza y decide.
+        Cleo ejecuta sin preguntar.
+        Nadie ve el esfuerzo real, pero todo funciona
+        como una coreografía perfectamente ensayada.
+      </p>
+      <p><strong>Movimiento especial:</strong> Task lanzada sin servidores</p>
+    </div>
+  </article>
+
+  <!-- #009 ELB -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#009</div>
+    <img src="images/Vera_y_Tipi.JPG" alt="Vera y Tipi">
+    <h2>Vera &amp; Tipi</h2>
+    <div class="types">
+      <span class="type network">Networking</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Elastic Load Balancing</p>
+      <p>
+        Siempre en medio, repartiendo responsabilidades.
+        Observan quién puede seguir y quién necesita descanso.
+        Gracias a ellas, nadie se quema.
+      </p>
+      <p><strong>Movimiento especial:</strong> Health check implacable</p>
+    </div>
+  </article>
+
+  <!-- #010 IAM -->
+  <article class="pokemon-card">
+    <div class="pokemon-id">#010</div>
+    <img src="images/Yeli_sinverguenza.jpg" alt="Yeli">
+    <h2>Yeli</h2>
+    <div class="types">
+      <span class="type security">Seguridad</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> AWS IAM</p>
+      <p>
+        Cree que puede hacerlo todo.
+        Intenta entrar donde no debe y tocar lo que no es suyo.
+        IAM es quien decide hasta dónde llega su descaro.
+      </p>
+      <p><strong>Movimiento especial:</strong> AccessDeniedException</p>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <p>
+    PETDEX · Sitio web estático alojado en Amazon S3<br>
+    Autoría: Sara Gavilán &amp; Clara Bueno
+  </p>
+</footer>
+
+</body>
+</html>
