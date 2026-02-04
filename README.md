@@ -85,6 +85,7 @@ PETDEX puede desplegarse fácilmente en:
 
 Proyecto creado por:
 - Sara Gavilán
+- Elena Jiménez
 - Clara Bueno
 
 ---
